@@ -1,0 +1,53 @@
+<section class="ftco-section ftco-no-pt ftco-no-pb contact-section">
+    <div class="container-fluid px-0">
+        <div class="row no-gutters block-9">
+            <div class="col-md-6 order-md-last d-flex">
+                <form class="bg-light p-5 contact-form" [formGroup]='formContact' ngSubmit='onSubmit()'>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Your Name" formControlName='name'>
+                        <div class="error" *ngIf='formContact.controls.name.errors && formContact.controls.name.touched'>
+                            Your name is required
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Your Email" formControlName='email'>
+                        <div class="error" *ngIf='formContact.controls.email.errors && formContact.controls.email.touched'>
+                            Your email is required
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Subject" formControlName='subject'>
+                        <div class="error" *ngIf='formContact.controls.subject.errors && formContact.controls.subject.touched'>
+                            Wich is the subject of the message
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="" id="" cols="30" rows="7" class="form-control"
+                            placeholder="Message" formControlName='message'></textarea>
+                            <div class="error" *ngIf='formContact.controls.message.errors && formContact.controls.message.touched'>
+                                Explain
+                            </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5" [disabled]='!formContact.valid' >
+                    </div>
+                </form>
+
+            </div>
+            <div class="col-md-8 py-md-5 pt-4 p-md-5">
+               
+            </div>
+
+            <div class="col-md-5  d-flex">
+                <div class="container imagen">
+                  <p class= "h3">Si tienes preguntas, escríbenos!  </p>
+                </div>
+               
+                 
+              </div>
+           
+        </div>
+        
+    </div>
+   
+</section>
